@@ -7,8 +7,28 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="">
   <app-root></app-root>
+<div id="1" ng-init="myVar1 = 'https://tbgincglobal.com/wp-content/uploads/2015/12/linkin-park-logo-white-300x213.jpg'" >
+	<img ng-src="{{myVar1}}" height="300px" width="422px">
+</div>
+
+<div id="d2" ng-init="myVar2 = 'http://www.namethatfont.net/wp-content/uploads/2012/11/nirvana-large.jpg'" >
+	<img ng-src="{{myVar2}}" height="300px" width="422px">
+</div>
+
+<div id="d3" ng-init="myVar3 = 'http://www.barclayscenter.com/assets/img/_.jpg'" >
+	<img ng-src="{{myVar3}}" height="300px" width="422px">
+</div>
+
+<div id="d4" ng-init="myVar4 = 'https://images6.alphacoders.com/747/thumb-350-747601.jpg'" >
+	<img ng-src="{{myVar4}}" height="300px" width="422px">
+</div>
+
+<div id="d5" ng-init="myVar5 = 'https://1.bp.blogspot.com/-KFG9jZkTCuM/VPJPEx_nCsI/AAAAAAAAXZs/KzSvYqwKEvw/w530-h410-p-k/combichrist_logo_by_xvideokidx-d4h8qe3.png'" >
+	<img ng-src="{{myVar5}}" height="300px" width="422px">
+</div>
 </body>
 </html>
