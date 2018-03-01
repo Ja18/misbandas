@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Banda }from './banda';
 
 export class Banda {
 	id: number;
