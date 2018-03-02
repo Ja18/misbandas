@@ -1,13 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Banda } from './banda';
 
-export class Banda {
-	id: number;
-	nombre: string;
-  constructor(id,nombre){
-    this.id=id;
-    this.nombre=nombre;
-  }
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
