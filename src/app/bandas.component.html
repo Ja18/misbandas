@@ -1,0 +1,15 @@
+<div class="titulo" style="text-align:center">
+    <h1>{{ title }}</h1>
+    <banda-detalle [banda]="banda"></banda-detalle>
+  </div>
+ 
+  <div>
+    <ul class="bandas">
+      <li 
+        [class.selected]="bandaItem === banda"
+        *ngFor="let bandaItem of bandas" 
+        (click)="seleccionar(bandaItem)">
+        <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
+      </li>
+    </ul>
+  </div>

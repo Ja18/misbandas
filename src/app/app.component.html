@@ -1,8 +1,9 @@
 <div class="titulo" style="text-align:center">
   <h1>{{ title }}</h1>
+  <a routerLink="/bandas">Bandas</a>
+  <router-outlet></router-outlet>
   <banda-detalle [banda]="banda"></banda-detalle>
 </div>
-
 <div>
   <ul class="bandas">
     <li 

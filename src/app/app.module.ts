@@ -4,18 +4,26 @@ import { FormsModule } from '@angular/forms'; //<--NgModel esta aquí
 
 import { AppComponent } from './app.component';
 import { BandaDetalleComponent } from './banda-detalle.component';
+import { BandasComponent } from './bandas.component';
+import { BandaService } from './banda.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BandaDetalleComponent
+    BandaDetalleComponent,
+    BandasComponent
   ],
+  
   imports: [
     BrowserModule,
-    FormsModule //<-- importa el FormsModule antes del enlace con [(ngModel)]
+    FormsModule, //<-- importa el FormsModule antes del enlace con [(ngModel)]
+    RouterModule.forRoot([
+      { path: 'bandas', component: BandasComponent }
+    ])
   ],
-  providers: [],
+  providers: [BandaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
