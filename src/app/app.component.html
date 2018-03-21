@@ -1,6 +1,10 @@
+<!--http://rogerdudler.github.io/git-guide/index.es.html   enlace para subir un repositorio a github-->
 <div class="titulo" style="text-align:center">
   <h1>{{ title }}</h1>
-  <a routerLink="/bandas">Bandas</a>
+  <nav>
+    <a routerLink="/tablero">Tablero</a>
+    <a routerLink="/bandas">Bandas</a>
+  </nav>
   <router-outlet></router-outlet>
   <banda-detalle [banda]="banda"></banda-detalle>
 </div>

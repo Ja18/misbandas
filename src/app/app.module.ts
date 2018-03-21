@@ -5,23 +5,25 @@ import { FormsModule } from '@angular/forms'; //<--NgModel esta aquí
 import { AppComponent } from './app.component';
 import { BandaDetalleComponent } from './banda-detalle.component';
 import { BandasComponent } from './bandas.component';
+import { TableroComponent } from './tablero.component';//importar componente tablero
+
 import { BandaService } from './banda.service';
-import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BandaDetalleComponent,
-    BandasComponent
+    BandasComponent,
+    TableroComponent // usar el componente tablero
   ],
   
   imports: [
     BrowserModule,
     FormsModule, //<-- importa el FormsModule antes del enlace con [(ngModel)]
-    RouterModule.forRoot([
-      { path: 'bandas', component: BandasComponent }
-    ])
+    AppRoutingModule // <-- importar el modulo app routing
   ],
   providers: [BandaService],
   bootstrap: [AppComponent]

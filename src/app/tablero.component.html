@@ -1,0 +1,8 @@
+<h3>Mi Tablero</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let banda of bandas" [routerLink]="['/detalle', banda.id]" class="col-1-4">
+        <div class="module banda">
+            <h4>{{banda.nombre}}</h4>
+        </div>
+    </a>    
+    </div>

@@ -14,4 +14,8 @@ export class BandaService {
             setTimeout( () => resolve(BANDAS), 3000);
         });
     }
+    getBanda(id: number): Promise<Banda> {
+        return this.getBandas()
+                    .then(bandas => bandas.find(banda => banda.id === id));
+    }
 }
