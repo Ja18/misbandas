@@ -1,4 +1,4 @@
-<!--<div class="titulo" style="text-align:center">
+<div class="titulo" style="text-align:center">
     <h1>{{ title }}</h1>
     <banda-detalle [banda]="banda"></banda-detalle>
   </div>
@@ -12,10 +12,4 @@
         <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
       </li>
     </ul>
-  </div>-->
-  <div *ngIf="banda">
-    <h2>Información de {{banda.nombre}}!</h2>
-    <label>nombre: </label>
-    <input [(ngModel)]="banda.nombre" placeholder="nombre de la banda">
   </div>
-  <button (click)="goBack()">Regresar</button>
