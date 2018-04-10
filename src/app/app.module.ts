@@ -28,7 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule, //<-- importa el FormsModule antes del enlace con [(ngModel)]
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    InMemoryWebApiModule.forRoot(InMemoryDataService), // in-memory web API
     HttpModule,
     AppRoutingModule // <-- importar el modulo app routing
   ],

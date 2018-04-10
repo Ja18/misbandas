@@ -47,4 +47,3 @@ export class BandasComponent implements OnInit {
       });
   }
   }
-}
