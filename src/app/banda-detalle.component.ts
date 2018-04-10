@@ -28,4 +28,9 @@ export class BandaDetalleComponent  implements OnInit {
     goBack(): void {
         this.location.back();
     }
+
+    guardar(): void {
+        this.bandaService.actualizar(this.banda)
+            .then( () => this.goBack());
+    }
 }

@@ -1,15 +1,23 @@
+<div>
+  <label>Nueva banda:</label><input #bandaNombre/>
+  <button (click)="nuevo(bandaNombre.value); bandaNombre.value=' '">
+    Añadir
+  </button>
+</div><!--
 <div class="titulo" style="text-align:center">
     <h1>{{ title }}</h1>
-    <banda-detalle [banda]="banda"></banda-detalle>
-  </div>
- 
+    
+  </div>-->
+  <banda-detalle [banda]="banda"></banda-detalle>
   <div>
     <ul class="bandas">
       <li 
         [class.selected]="bandaItem === banda"
         *ngFor="let bandaItem of bandas" 
         (click)="seleccionar(bandaItem)">
-        <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
+          <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
+        <button class="delete"
+          (click)="borrar(banda); $event.stopPropagation()">x</button>
       </li>
     </ul>
   </div>

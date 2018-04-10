@@ -27,4 +27,24 @@ export class BandasComponent implements OnInit {
   seleccionar(item: Banda): void {
   	this.banda = item;
   }
+
+  nuevo(nombre: string): void {
+    nombre = nombre.trim();
+    if (!nombre) { return; }
+    this.bandaService.crearNuevo(nombre)
+    .then(banda =>{
+      this.bandas.push(banda);
+      this.banda = null;
+    }); 
+  }
+
+  borrar(banda: Banda): void {
+    this.bandaService
+      .borrar(banda.id)
+      .then( () => {
+        this.bandas = this.bandas.filter(h => h !== banda);
+        if (this.banda === banda) { this.banda = null; }
+      });
+  }
+  }
 }

@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; //<--NgModel esta aquí
+import { HttpModule } from '@angular/http';
+
+// Imposrts para cargar y configurar in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { BandaDetalleComponent } from './banda-detalle.component';
@@ -23,6 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule, //<-- importa el FormsModule antes del enlace con [(ngModel)]
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    HttpModule,
     AppRoutingModule // <-- importar el modulo app routing
   ],
   providers: [BandaService],

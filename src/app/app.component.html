@@ -2,7 +2,7 @@
 <!--<h1>{{ title }}</h1>
 <a routerLink="/bandas">Bandas</a>
 -->
-<div class="titulo" style="text-align:center">
+<!--<div class="titulo" style="text-align:center">-->
   <h1>{{ title }}</h1>
   <nav>
     <a routerLink="/tablero">Tablero</a>
@@ -10,7 +10,7 @@
   </nav>
   <router-outlet></router-outlet>
   <banda-detalle [banda]="banda"></banda-detalle>
-</div>
+<!--</div>-->
 <div>
   <ul class="bandas">
     <li 
@@ -20,4 +20,9 @@
       <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
     </li>
   </ul>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+
+  </div>
 </div>
