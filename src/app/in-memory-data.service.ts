@@ -10,5 +10,6 @@ export class InMemoryDataService implements InMemoryDbService {
             {   id: 14, nombre: 'swedish House Mafia'},
             {   id: 15, nombre: '50 Cent'},            
         ];
+        return {bandas};
     }
 }
