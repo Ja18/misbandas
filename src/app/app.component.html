@@ -1,14 +1,14 @@
 <!--http://rogerdudler.github.io/git-guide/index.es.html   enlace para subir un repositorio a github-->
-<!--https://geeks-mexico.com/2017/09/12/configura-bootstrap-en-angular-4/    enlace para descargar Bootstrap-->
+<!--https://geeks-mexico.com/2017/09/12/configura-bootstrap-en-angular-4/    enlace para descargar Boottrap-->
 <!--<h1>{{ title }}</h1>
 <a routerLink="/bandas">Bandas</a>
 -->
 <!--<div class="titulo" style="text-align:center">-->
   <h1>{{ title }}</h1>
-  <nav>
-    <a routerLink="/tablero">Tablero</a>
-    <a routerLink="/bandas">Bandas</a>
-  </nav>
+    <nav>
+      <a routerLink="/tablero">Tablero</a>
+      <a routerLink="/bandas">Bandas</a>
+    </nav>
   <router-outlet></router-outlet>
   <banda-detalle [banda]="banda"></banda-detalle>
 <!--</div>-->
@@ -21,9 +21,4 @@
       <span class="insignia">{{bandaItem.id}}</span> {{bandaItem.nombre}}
     </li>
   </ul>
-</div>
-<div class="panel panel-default">
-  <div class="panel-heading">
-
-  </div>
 </div>

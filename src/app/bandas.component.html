@@ -1,8 +1,6 @@
 <div>
   <label>Nueva banda:</label><input #bandaNombre/>
-  <button (click)="nuevo(bandaNombre.value); bandaNombre.value=''">
-    Añadir
-  </button>
+  <button (click)="nuevo(bandaNombre.value); bandaNombre.value=''">Añadir</button>
 </div>
   <banda-detalle [banda]="banda"></banda-detalle>
   <div>
