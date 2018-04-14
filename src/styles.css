@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+#d1{
+	display: inline-block;
+	margin-top: -250px;
+	vertical-align: top;
+}
+
+#d2{
+	display: inline-block;
+	height: 300px;
+	width: 422px;
+	margin-left: 429px;
+	margin-top: -304px;
+	vertical-align: top;
+}
+#d3{
+	display: inline-block;
+	height: 300px;
+	width: 422px;
+	margin-left: 858px;
+	margin-top: -322px;
+	vertical-align: top;
+
+}
+#d4{
+	display: inline-block;
+	height: 300px;
+	width: 422px;
+	margin-top: -34px;
+	vertical-align: top;
+}
+#d5{
+	display: inline-block;
+	height: 300px;
+	width: 422px;
+	margin-left: 4px;
+	margin-top: -34px;
+	vertical-align: top;
+
+}
