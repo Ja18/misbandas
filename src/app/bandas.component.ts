@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Banda } from './banda';
+import { BANDAS } from './bandas-falsas';
 import { BandaService } from './banda.service';
 
 @Component({
@@ -17,15 +18,13 @@ export class BandasComponent implements OnInit {
 
   getBandas(): void{
   //  this.bandas = this.bandaService.getBandas();
-  this.bandaService.getBandas().then(bandas => this.bandas = bandas);
+  this.bandaService.getBandas().then(bandas=>this.bandas=bandas);
   }
-
   ngOnInit(): void {
     this.getBandas();
-  }
-  
+  }  
   seleccionar(item: Banda): void {
-  	this.banda = item;
+  	this.banda=item;
   }
 
   nuevo(nombre: string): void {

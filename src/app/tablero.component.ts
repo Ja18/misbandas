@@ -9,14 +9,10 @@ import { BandaService } from './banda.service';
 })
 
 export class TableroComponent implements OnInit{
-
     bandas: Banda[] = [];
-
     // usa el constructor para invocar el servicio de datos 
     constructor(private bandaService: BandaService){}
-
     ngOnInit(): void {
-        this.bandaService.getBandas()
-            .then(bandas => this.bandas = bandas.slice(1, 5));
+        this.bandaService.getBandas().then(bandas => this.bandas=bandas.slice(1, 5));
     }    
 }

@@ -3,34 +3,39 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; //<--NgModel esta aquí
 import { HttpModule } from '@angular/http';
 
-// Imposrts para cargar y configurar in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
-
 import { AppComponent } from './app.component';
 import { BandaDetalleComponent } from './banda-detalle.component';
 import { BandasComponent } from './bandas.component';
-import { TableroComponent } from './tablero.component';//importar componente tablero
-
 import { BandaService } from './banda.service';
-
 import { AppRoutingModule } from './app-routing.module';
 
+import { RouterModule } from '@angular/router';
+import { TableroComponent } from './tablero.component';
+
+// Imports para cargar y configurar in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     BandaDetalleComponent,
     BandasComponent,
-    TableroComponent // usar el componente tablero
+    TableroComponent    
   ],
-  
+
   imports: [
     BrowserModule,
-    FormsModule, //<-- importa el FormsModule antes del enlace con [(ngModel)]
-    InMemoryWebApiModule.forRoot(InMemoryDataService), // in-memory web API
+    FormsModule,
     HttpModule,
-    AppRoutingModule // <-- importar el modulo app routing
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    AppRoutingModule,
+    RouterModule.forRoot([
+      { path: "bandas", component: BandasComponent},
+      { path: "tablero", component: TableroComponent},
+      { path: "", redirectTo: "/tablero", pathMatch: "full"},
+      { path: "detalle/:id", component: BandaDetalleComponent},
+    ])
   ],
   providers: [BandaService],
   bootstrap: [AppComponent]

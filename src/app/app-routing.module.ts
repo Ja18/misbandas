@@ -5,7 +5,7 @@ import { TableroComponent } from './tablero.component';//importar componente tab
 import { BandasComponent } from './bandas.component';
 import { BandaDetalleComponent } from './banda-detalle.component';
 
-const routes: Routes = [
+const Routes = [
     { path: 'bandas', component: BandasComponent }, // ruta para listar bandas
     { path: 'tablero', component: TableroComponent }, // ruta para mostrar tablero
     { path: '', redirectTo: '/tablero', pathMatch: 'full'},
@@ -13,8 +13,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [ RouterModule ]
-  })
+    imports: [
+        RouterModule.forRoot( Routes)],
 
+  })
 export class AppRoutingModule { }
